@@ -1,9 +1,4 @@
-// import Container from 'react-bootstrap/Container';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
-
-/* This example requires Tailwind CSS v2.0+ */
+import CartWidget from './CartWidget'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import {
@@ -21,6 +16,7 @@ import {
   XIcon,
 } from '@heroicons/react/outline'
 import { ChevronDownIcon } from '@heroicons/react/solid'
+
 
 const solutions = [
   {
@@ -83,7 +79,7 @@ const recentPosts = [
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
-
+<CartWidget/>
 export default function NavBar() {
   return (
     <Popover className="relative bg-gray-600">
@@ -112,7 +108,7 @@ export default function NavBar() {
                   <Popover.Button
                     className={classNames(
                       open ? 'text-gray-900' : 'text-gray-500',
-                      'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      'group bg-gray-600 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     )}
                   >
                     <span className='text-red-600'>Suplementos</span>
@@ -184,7 +180,7 @@ export default function NavBar() {
                   <Popover.Button
                     className={classNames(
                       open ? 'text-gray-900' : 'text-gray-500',
-                      'group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
+                      'group bg-gray-600 rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'
                     )}
                   >
                     <span className='text-red-600'>Más info</span>
@@ -252,11 +248,11 @@ export default function NavBar() {
           </Popover.Group>
           <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
             <a href="#" className="text-base font-medium text-red-600 whitespace-nowrap hover:text-gray-900">
-              Ingresar
+                Ingresar
             </a>
             <a
               href="#"
-              className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-indigo-600 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-indigo-700"
+              className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-gray-600 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-red-600"
             >
               Registrarse
             </a>
@@ -343,9 +339,12 @@ export default function NavBar() {
           </div>
         </Popover.Panel>
       </Transition>
+      <CartWidget/>
     </Popover>
-  )
+  )  
 }
+
+
 
 
 

@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 // import CollapsibleExample from './components/Navbar'
 import NavBar from './components/Navbar';
-import CartWidget from './components/Navbar/CartWidget';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 
 const App = () => {
@@ -12,7 +11,6 @@ const App = () => {
   return (
     <div className="App">
       <NavBar/>
-      <CartWidget/>
       <ItemListContainer greeting = 'Acá proximamente encontraran todos nuestros productos!' color = "#08CDB7"/>
       <header className="App-header">
         
