@@ -3,6 +3,7 @@ import './App.css';
 // import CollapsibleExample from './components/Navbar'
 import NavBar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
+import ItemCount from './components/ItemCount/ItemCount';
 
 const App = () => {
 
@@ -12,6 +13,7 @@ const App = () => {
     <div className="App">
       <NavBar/>
       <ItemListContainer greeting = 'Acá proximamente encontraran todos nuestros productos!' color = "#08CDB7"/>
+      <ItemCount/>
       <header className="App-header">
         
         <img src={logo} className="App-logo" alt="logo" />
