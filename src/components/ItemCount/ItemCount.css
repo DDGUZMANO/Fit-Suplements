@@ -6,3 +6,19 @@
     text-align: center;
 
 }
+
+.buttonStyle{
+    border-radius: 3px;
+    background-color: #919899;
+    width: 30px;
+    border-color: black;
+    margin: 3px;
+}
+
+.buttonAddStyle{
+    border-radius: 3px;
+    background-color: #919899;
+    width: 100px;
+    border-color: black;
+    margin: 5px;
+}

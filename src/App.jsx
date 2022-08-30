@@ -9,11 +9,15 @@ const App = () => {
 
   const person = { name:'Douglas', lastname:'Guzmán'}
 
+  const onAdd = (cantidad) =>{
+    console.log(`Añadiste ${cantidad} de unidades al carrito`)
+  }
+
   return (
     <div className="App">
       <NavBar/>
       <ItemListContainer greeting = 'Acá proximamente encontraran todos nuestros productos!' color = "#08CDB7"/>
-      <ItemCount/>
+      <ItemCount initial = {5} stock = {10} onAdd = {onAdd}/>
       <header className="App-header">
         
         <img src={logo} className="App-logo" alt="logo" />
