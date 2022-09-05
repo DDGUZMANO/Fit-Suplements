@@ -4,10 +4,12 @@ import './App.css';
 import NavBar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import { useEffect, useState } from 'react';
 
-const App = () => {
-
+const App = ({textoDeBusqueda}) => {
   const person = { name:'Douglas', lastname:'Guzmán'}
+  const [carrito, setCarrito] = useState([])
+
 
   const onAdd = (cantidad) =>{
     console.log(`Añadiste ${cantidad} de unidades al carrito`)
@@ -16,8 +18,8 @@ const App = () => {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer greeting = 'Acá proximamente encontraran todos nuestros productos!' color = "#08CDB7"/>
-      <ItemCount initial = {5} stock = {10} onAdd = {onAdd}/>
+      <ItemListContainer/>
+      {/* <ItemCount initial = {5} stock = {10} onAdd = {onAdd}/> */}
       <header className="App-header">
         
         <img src={logo} className="App-logo" alt="logo" />
@@ -34,6 +36,7 @@ const App = () => {
           Learn React
         </a>
       </header>
+      
     </div>
   );
 }
