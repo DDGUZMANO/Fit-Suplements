@@ -5,6 +5,9 @@ import NavBar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
 import { useEffect, useState } from 'react';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer';
+
 
 const App = ({textoDeBusqueda}) => {
   const person = { name:'Douglas', lastname:'Guzmán'}
@@ -18,8 +21,16 @@ const App = ({textoDeBusqueda}) => {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer/>
-      {/* <ItemCount initial = {5} stock = {10} onAdd = {onAdd}/> */}
+      {/* <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<ItemListContainer/>}/>
+          <Route path='/detalle/:productoId' element={<ItemListContainer/>}/>
+          <Route path='/categoria/:productoIp' element={<ItemListContainer/>}/>
+        </Routes>
+      </BrowserRouter> */}
+      <ItemDetailContainer/>
+      {/* <ItemListContainer/> */}
+      
       <header className="App-header">
         
         <img src={logo} className="App-logo" alt="logo" />
