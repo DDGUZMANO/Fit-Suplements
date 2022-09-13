@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 const ItemDetailContainer = () =>{
     const {idd} = useParams()
-    const id = "MLA1155981094"
+    const id = solo.id
     const productoSolo = async () => {
 
         try {

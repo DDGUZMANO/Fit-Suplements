@@ -30,6 +30,7 @@ const App = ({textoDeBusqueda}) => {
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
           <Route path='/category/:id' element={<ItemListContainer/>}/>
+          <Route path='/item/:idd' element={<ItemDetailContainer/>}/>
           <Route path='/investigacion' element={<Investigacion/>}/>
           <Route path='/estadisticas' element={<Estadisticas/>}/>
           <Route path='/ingresar' element={<Ingresar/>}/>
