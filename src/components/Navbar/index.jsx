@@ -1,3 +1,4 @@
+import { NavLink } from 'react-router-dom'
 import CartWidget from './CartWidget'
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
@@ -102,7 +103,7 @@ export default function NavBar() {
             </Popover.Button>
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
-            <Popover className="relative">
+            {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -165,16 +166,16 @@ export default function NavBar() {
                   </Transition>
                 </>
               )}
-            </Popover>
+            </Popover> */}
 
-            <a href="#" className="text-base font-medium text-red-600 hover:text-gray-900">
+            <NavLink to={"/registro"} className="text-base font-medium text-red-600 hover:text-gray-900">
               Estadísticas
-            </a>
-            <a href="#" className="text-base font-medium text-red-600 hover:text-gray-900">
+            </NavLink>
+            <NavLink to='/investigacion' className="text-base font-medium text-red-600 hover:text-gray-900">
               Investigación
-            </a>
+            </NavLink>
 
-            <Popover className="relative">
+            {/* <Popover className="relative">
               {({ open }) => (
                 <>
                   <Popover.Button
@@ -244,18 +245,18 @@ export default function NavBar() {
                   </Transition>
                 </>
               )}
-            </Popover>
+            </Popover> */}
           </Popover.Group>
           <div className="items-center justify-end hidden md:flex md:flex-1 lg:w-0">
-            <a href="#" className="text-base font-medium text-red-600 whitespace-nowrap hover:text-gray-900">
+            <NavLink to='/ingresar' className="text-base font-medium text-red-600 whitespace-nowrap hover:text-gray-900">
                 Ingresar
-            </a>
-            <a
-              href="#"
+            </NavLink>
+            <NavLink
+              to='/registro'
               className="inline-flex items-center justify-center px-4 py-2 ml-8 text-base font-medium text-white bg-gray-600 border border-transparent rounded-md shadow-sm whitespace-nowrap hover:bg-red-600"
             >
               Registrarse
-            </a>
+            </NavLink>
           </div>
         </div>
       </div>

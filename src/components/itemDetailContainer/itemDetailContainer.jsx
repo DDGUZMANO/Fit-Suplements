@@ -1,4 +1,5 @@
 import React from "react";
+import { useParams } from "react-router-dom";
 import ItemDetail from "../itemDetail/itemDetail";
 import { useEffect, useState } from "react";
 
@@ -6,17 +7,19 @@ import { useEffect, useState } from "react";
 
 
 const ItemDetailContainer = () =>{
+    const {idd} = useParams()
     const id = "MLA1155981094"
     const productoSolo = async () => {
 
         try {
         const response = await fetch(
-            "https://api.mercadolibre.com/sites/MLA/search?q=suplementos"
+            `https://api.mercadolibre.com/items/${id}`
         );
         const data = await response.json();
-        const filtrado = data.results.filter((e)=> e.id===id).shift();
-        return filtrado;
-        setSolo(data.results);
+        // const filtrado = data.results.filter((e)=> e.id===id).shift();
+        // return filtrado;
+        return data;
+        // setSolo(data.results);
         } catch (e) {
         console.log("hay un error ");
         }

@@ -7,6 +7,11 @@ import ItemCount from './components/ItemCount/ItemCount';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer';
+import Estadisticas from './components/Navbar/estadisticas';
+import Ingresar from './components/Navbar/ingresar';
+import Registro from './components/Navbar/registrarse';
+import Investigacion from './components/Navbar/investigacion';
+
 
 
 const App = ({textoDeBusqueda}) => {
@@ -21,14 +26,17 @@ const App = ({textoDeBusqueda}) => {
   return (
     <div className="App">
       <NavBar/>
-      {/* <BrowserRouter>
+      <BrowserRouter>
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
-          <Route path='/detalle/:productoId' element={<ItemListContainer/>}/>
-          <Route path='/categoria/:productoIp' element={<ItemListContainer/>}/>
+          <Route path='/category/:id' element={<ItemListContainer/>}/>
+          <Route path='/investigacion' element={<Investigacion/>}/>
+          <Route path='/estadisticas' element={<Estadisticas/>}/>
+          <Route path='/ingresar' element={<Ingresar/>}/>
+          <Route path='/registro' element={<Registro/>}/>
         </Routes>
-      </BrowserRouter> */}
-      <ItemDetailContainer/>
+      </BrowserRouter>
+      {/* <ItemDetailContainer/> */}
       {/* <ItemListContainer/> */}
       
       <header className="App-header">
