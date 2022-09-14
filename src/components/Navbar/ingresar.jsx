@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const Ingresar = () => {
-    const {ingresar} = useParams()
+    const {ingresarId} = useParams()
 
   return 
 <div>

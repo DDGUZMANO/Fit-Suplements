@@ -1,8 +1,10 @@
 import React from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { NavLink, useParams } from "react-router-dom";
 
 function ItemDetail({solo}) {
+    const {idd} = useParams();
     
     return (
     <Card style={{ width: '18rem' }}>
@@ -12,7 +14,7 @@ function ItemDetail({solo}) {
         <Card.Text>
             {solo.domain_id}
         </Card.Text>
-        <Button variant="primary">{solo.price}</Button>
+        <Button variant="primary"><NavLink to='/item/:idd'>detalle</NavLink></Button>
         </Card.Body>
     </Card>
     );

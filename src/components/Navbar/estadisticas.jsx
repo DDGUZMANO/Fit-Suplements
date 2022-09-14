@@ -2,12 +2,12 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const Estadisticas = () => {
-    const {registro} = useParams()
+    const {estadisticaId} = useParams()
 
   return 
-<div>
-    <p>Acá hablaremos de estadisticas</p>
-</div>
+  <div>
+      <p>Acá hablaremos de estadisticas</p>
+  </div>
 
 };
 

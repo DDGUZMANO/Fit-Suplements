@@ -107,7 +107,7 @@ export default function NavBar() {
             <NavLink to={"/estadisticas"} className="text-base font-medium text-red-600 hover:text-gray-900">
               Estadísticas
             </NavLink>
-            <NavLink to='/investigacion' className="text-base font-medium text-red-600 hover:text-gray-900">
+            <NavLink to='/investigacion/' className="text-base font-medium text-red-600 hover:text-gray-900">
               Investigación
             </NavLink>
 

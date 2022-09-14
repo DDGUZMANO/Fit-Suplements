@@ -34,7 +34,7 @@ const ItemDetailContainer = () =>{
                     resolve(productoSolo())},
                     2000)
                 })
-                getSolo.then(res => setSolo(res))
+                getSolo.then(res => setSolo(res.find(setSolo => setSolo.id === parseInt(idd))))
             },[]
         )
         
