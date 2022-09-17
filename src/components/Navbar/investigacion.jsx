@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom';
 const Investigacion = () => {
     const {investigacionId} = useParams()
 
-  return 
-<div>
+  return (
+  <div>
     <p>Acá encontraremos investigaciones relacionadas a los suplementos deportivos</p>
-</div>
+</div>)
 };
 
 export default Investigacion;

@@ -4,10 +4,11 @@ import { useParams } from 'react-router-dom';
 const Ingresar = () => {
     const {ingresarId} = useParams()
 
-  return 
-<div>
+  return (
+  <div>
     <p>Acá encontraremos un formulario de ingreso</p>
-</div>
+</div>)
+
 };
 
 export default Ingresar;

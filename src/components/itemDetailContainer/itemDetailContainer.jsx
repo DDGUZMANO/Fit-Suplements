@@ -7,19 +7,19 @@ import { useEffect, useState } from "react";
 
 
 const ItemDetailContainer = () =>{
-    const {idd} = useParams()
-    const id = solo.id
+    const {itemId} = useParams()
+    // const id = solo.id
     const productoSolo = async () => {
 
         try {
         const response = await fetch(
-            `https://api.mercadolibre.com/items/${id}`
+            `https://api.mercadolibre.com/items/${itemId}`
         );
         const data = await response.json();
         // const filtrado = data.results.filter((e)=> e.id===id).shift();
         // return filtrado;
-        return data;
-        // setSolo(data.results);
+        // return data;
+        setSolo(data);
         } catch (e) {
         console.log("hay un error ");
         }
@@ -28,13 +28,14 @@ const ItemDetailContainer = () =>{
     
     
     useEffect(()=>{
-        const getSolo = new Promise (
-            resolve => {
-                setTimeout(()=>{
-                    resolve(productoSolo())},
-                    2000)
-                })
-                getSolo.then(res => setSolo(res.find(setSolo => setSolo.id === parseInt(idd))))
+        // const getSolo = new Promise (
+        //     resolve => {
+        //         setTimeout(()=>{
+        //             resolve(productoSolo())},
+        //             2000)
+        //         })
+        //         getSolo.then(res => setSolo(res.find(setSolo => setSolo.id === parseInt(idd))))
+        productoSolo();
             },[]
         )
         

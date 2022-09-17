@@ -4,10 +4,10 @@ import { useParams } from 'react-router-dom';
 const Registro = () => {
     const {registroId} = useParams()
 
-  return 
+  return (
 <div>
     <p>Acá encontraremos un formulario de registro</p>
-</div>
+</div>)
 };
 
 export default Registro;

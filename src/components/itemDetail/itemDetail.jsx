@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import { NavLink, useParams } from "react-router-dom";
 
 function ItemDetail({solo}) {
-    const {idd} = useParams();
+    const {itemId} = useParams();
     
     return (
     <Card style={{ width: '18rem' }}>
@@ -14,7 +14,7 @@ function ItemDetail({solo}) {
         <Card.Text>
             {solo.domain_id}
         </Card.Text>
-        <Button variant="primary"><NavLink to='/item/:idd'>detalle</NavLink></Button>
+        <Button variant="primary"><NavLink to='/item/{solo.id}'>detalle</NavLink></Button>
         </Card.Body>
     </Card>
     );
