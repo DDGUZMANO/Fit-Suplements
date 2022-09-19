@@ -7,13 +7,13 @@ import { useEffect, useState } from "react";
 
 
 const ItemDetailContainer = () =>{
-    const {itemId} = useParams()
+    const {id} = useParams()
     // const id = solo.id
     const productoSolo = async () => {
 
         try {
         const response = await fetch(
-            `https://api.mercadolibre.com/items/${itemId}`
+            `https://api.mercadolibre.com/items/${id}`
         );
         const data = await response.json();
         // const filtrado = data.results.filter((e)=> e.id===id).shift();
@@ -36,14 +36,8 @@ const ItemDetailContainer = () =>{
         //         })
         //         getSolo.then(res => setSolo(res.find(setSolo => setSolo.id === parseInt(idd))))
         productoSolo();
-            },[]
-        )
+            },[])
         
-    
-
-    
-
-
     return (
         
         <ItemDetail solo={solo}/>
