@@ -3,7 +3,7 @@ import './App.css';
 // import CollapsibleExample from './components/Navbar'
 import NavBar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount';
+// import ItemCount from './components/ItemCount/ItemCount';
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import ItemDetailContainer from './components/itemDetailContainer/itemDetailContainer';
@@ -18,6 +18,7 @@ const App = () => {
   return (
     <div className="App">
         <NavBar/>
+        <div  className="routes">
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
           <Route path='/category/:id' element={<ItemListContainer/>}/>
@@ -27,6 +28,7 @@ const App = () => {
           <Route path='/ingresar' element={<Ingresar/>}/>
           <Route path='/registro' element={<Registro/>}/>
         </Routes>
+        </div>
     </div>
   );
 };

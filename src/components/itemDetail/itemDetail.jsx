@@ -1,10 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import { NavLink, useParams } from "react-router-dom";
-
+import { Link, NavLink, useParams } from "react-router-dom";
+import ItemCount from "../ItemCount/ItemCount";
 function ItemDetail({solo}) {
     const {itemId} = useParams();
+
+    const [goToCart, setGoToCart] = useState(false)
+    const onAdd = (quantity) =>{
+        setGoToCart(true);
+    }
     
     return (
     <Card style={{ width: '18rem' }}>
@@ -12,8 +17,15 @@ function ItemDetail({solo}) {
         <Card.Body>
         <Card.Title>{solo.title}</Card.Title>
         <Card.Text>
-            {solo.domain_id}
+            {solo.domain_id};
+            
+
         </Card.Text>
+        {
+            goToCart
+            ? <Link to = '/cart'>Finalizar compra</Link>
+            : <ItemCount initial={0} stock={10} onAdd = {onAdd}/>
+        }
         <Button variant="primary"><NavLink to='/item/{solo.id}'>detalle</NavLink></Button>
         </Card.Body>
     </Card>

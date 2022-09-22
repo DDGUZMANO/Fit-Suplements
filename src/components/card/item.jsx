@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom';
 function Item({producto}) {
     
     return (
+        
         <Link to = {`/item/${producto.id}`}>
             <Card style={{ width: '18rem' }}>
                 <Card.Img variant="top" src= {producto.thumbnail} />
@@ -18,6 +19,7 @@ function Item({producto}) {
             </Card.Body>
             </Card>
         </Link>
+        
     );
 }
 
