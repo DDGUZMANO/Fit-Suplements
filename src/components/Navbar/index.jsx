@@ -104,11 +104,11 @@ export default function NavBar() {
           </div>
           <Popover.Group as="nav" className="hidden space-x-10 md:flex">
 
-            <NavLink to={"/estadisticas"} className="text-base font-medium text-red-600 hover:text-gray-900">
-              Estadísticas
+            <NavLink to={"/category/protein"} className="text-base font-medium text-red-600 hover:text-gray-900">
+              Proteinas
             </NavLink>
-            <NavLink to='/investigacion/' className="text-base font-medium text-red-600 hover:text-gray-900">
-              Investigación
+            <NavLink to='/category/creatine' className="text-base font-medium text-red-600 hover:text-gray-900">
+              Creatinas
             </NavLink>
 
           </Popover.Group>

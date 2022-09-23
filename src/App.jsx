@@ -21,7 +21,7 @@ const App = () => {
         <div  className="routes">
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
-          <Route path='/category/:id' element={<ItemListContainer/>}/>
+          <Route path='/category/:category_id' element={<ItemListContainer/>}/>
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route path='/investigacion' element={<Investigacion/>}/>
           <Route path='/estadisticas' element={<Estadisticas/>}/>

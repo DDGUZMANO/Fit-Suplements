@@ -14,6 +14,7 @@ function Item({producto}) {
                 <Card.Title>{producto.title}</Card.Title>
                 <Card.Text>
                     {producto.domain_id}
+                    {producto.category_id}
                 </Card.Text>
                 <Button variant="primary">{producto.price}</Button>
             </Card.Body>

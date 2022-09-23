@@ -9,6 +9,8 @@ const ItemListContainer = () => {
 
 const [productos, setProductos] = useState([]);
 
+const {category_id} = useParams();
+
 const buscarProductos = async () => {
 
     try {
@@ -20,12 +22,15 @@ const buscarProductos = async () => {
     } catch (e) {
     console.log("hay un error ");
     }
+    if(category_id){
+        setProductos(productos=>productos.filter(category_id===productos.category_id))
+    }
 };
 
 useEffect(() => {
 
     buscarProductos();
-
+    
 }, []);
 
 console.log(productos)
@@ -36,5 +41,6 @@ return (
     );
 
 };
+
 
 export default ItemListContainer;
