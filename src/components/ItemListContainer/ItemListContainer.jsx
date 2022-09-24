@@ -14,24 +14,32 @@ const {category_id} = useParams();
 const buscarProductos = async () => {
 
     try {
-    const response = await fetch(
+
+        if(!category_id){
+        const response = await fetch(
         "https://api.mercadolibre.com/sites/MLA/search?q=suplementos"
-    );
-    const data = await response.json();
-    setProductos(data.results);
+        );
+        const data = await response.json();
+        setProductos(data.results);
+        }else{
+            const response = await fetch(
+                `https://api.mercadolibre.com/sites/MLA/search?q=${category_id}`
+                );
+            const data = await response.json();
+            setProductos(data.results);
+        }
+
     } catch (e) {
     console.log("hay un error ");
     }
-    if(category_id){
-        setProductos(productos=>productos.filter(category_id===productos.category_id))
-    }
+
 };
 
 useEffect(() => {
 
     buscarProductos();
     
-}, []);
+}, [category_id]);
 
 console.log(productos)
 
