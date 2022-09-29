@@ -10,7 +10,7 @@ const CartProvider = ({children}) => {
 
     const addProduct = (producto, newQuantity) =>{
 
-        const anterior = parseInt(isInCart(producto.id))
+        const anterior = isInCart(producto.id)
 
         
         if(anterior){
@@ -35,7 +35,7 @@ const CartProvider = ({children}) => {
     
 
     const isInCart = (id) =>
-            carrito.find(producto => producto.id===id) ? true : false;
+            carrito.find(producto => producto.id===id)
     
 
     const removeProduct = (id) => setCarrito(carrito.filter(product => product.id !==id))
