@@ -2,7 +2,7 @@ import React from 'react';
 import { useParams } from 'react-router-dom';
 
 const Registro = () => {
-    const {registroId} = useParams()
+    const {registro} = useParams()
 
   return (
 <div>

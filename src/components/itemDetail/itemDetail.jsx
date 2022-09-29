@@ -3,12 +3,15 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { Link, NavLink, useParams } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
+import { useCartContext } from "../context/CartContext";
 function ItemDetail({solo}) {
     const {itemId} = useParams();
 
     const [goToCart, setGoToCart] = useState(false)
+    const {addProduct} = useCartContext();
     const onAdd = (quantity) =>{
         setGoToCart(true);
+        addProduct(data,quantity);
     }
     
     return (
