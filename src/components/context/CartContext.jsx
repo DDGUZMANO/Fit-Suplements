@@ -9,8 +9,8 @@ const CartProvider = ({children}) => {
     const [carrito, setCarrito] = useState([]);
 
     const addProduct = (item, newQuantity) =>{
-        const newCarrito = carrito.filter(prod => prod.Id !== item.id);
-        newCarrito.push({ ...item, quantity: newQuantity});
+        const newCarrito = carrito.filter(prod=>prod.id !==item.id);
+        newCarrito.push({...item, quantity:newQuantity});
         setCarrito(newCarrito)
     }
 
@@ -34,7 +34,7 @@ const CartProvider = ({children}) => {
 
     return(
     <div>
-        <CartContext.Provider value = {{clearCart, isInCart, removeProduct, addProduct}}>
+        <CartContext.Provider value = {{clearCart, isInCart, removeProduct, addProduct, carrito}}>
             {children}
         </CartContext.Provider>
     </div>

@@ -4,14 +4,15 @@ import Card from 'react-bootstrap/Card';
 import { Link, NavLink, useParams } from "react-router-dom";
 import ItemCount from "../ItemCount/ItemCount";
 import { useCartContext } from "../context/CartContext";
+import Item from "../card/item";
 function ItemDetail({solo}) {
-    const {itemId} = useParams();
+    const {item} = useParams();
 
     const [goToCart, setGoToCart] = useState(false)
     const {addProduct} = useCartContext();
     const onAdd = (quantity) =>{
         setGoToCart(true);
-        addProduct(data,quantity);
+        addProduct(solo,quantity);
     }
     
     return (
