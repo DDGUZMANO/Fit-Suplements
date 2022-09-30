@@ -12,7 +12,7 @@ const CartItem = ({item}) =>{
     return(
         <>
             <h2>{item.quantity} - {item.title}</h2>
-            <button className= "bg-slate-600" onClick={handleRemove}>Eliminar Producto</button>
+            <button className= "bg-slate-600  rounded-sm" onClick={handleRemove}>Eliminar Producto</button>
             
         </>   
         
